@@ -5,10 +5,9 @@
 - Create a component with a H1 (pass a prop title)
 - Create a card with title and footer (add them to the Container that you wrote passing props to the card)
 - Create a component with a form with first and last name, email and phone number, add add it inside the Card - change values on state, button on submit with event just do a console.log of the state)
-- Create a component with a timer, showing the time right now
+- Create a component with a Clock, showing the time right no (hint: use mount and unmount lifecycle functions and state);
 
 EXTRA: use react router and with multiple routes ex: route1, route2, route3 adding different cards inside.
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
