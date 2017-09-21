@@ -1,9 +1,10 @@
 # react-workshop
 
 - Create a Higher Order Component (pass children) with the whole lifecycle (write then all out, also )
-- Create a component with a H1 (pass children)
-- Create a card with title and footer (passed as props given from the Higher Order Component)
-- Create a component with a form with first and last name, email and phone number, add it inside the Card - change values on state, button on submit with event just do a console.log of the state)
+    - add it to containers
+- Create a component with a H1 (pass a prop title)
+- Create a card with title and footer (add them to the Container that you wrote passing props to the card)
+- Create a component with a form with first and last name, email and phone number, add add it inside the Card - change values on state, button on submit with event just do a console.log of the state)
 - Create a component with a timer, showing the time right now
 
 EXTRA: use react router and with multiple routes ex: route1, route2, route3 adding different cards inside.
