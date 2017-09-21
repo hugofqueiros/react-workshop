@@ -18,7 +18,7 @@ class App extends Component {
             clicks: 0,
             inputMsg: 'will update when you type something!'
         }
-    }1
+    }
 
     componentDidMount() {
         console.log('COMPONENT DID MOUNT');
