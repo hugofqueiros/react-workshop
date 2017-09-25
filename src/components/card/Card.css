@@ -1,0 +1,17 @@
+.Card {
+    width: 500px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+}
+
+.Card__title {
+    height: 30px;
+}
+
+.Card__body {
+}
+
+.Card__footer {
+    height: 30px;
+}
