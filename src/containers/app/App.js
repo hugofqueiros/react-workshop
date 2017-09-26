@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Header from '../../components/header/Header';
+import HighOrderComponent from '../highOrderComponent/HighOrderComponent';
+import Clock from '../../components/clock/Clock';
+
 import './App.css';
 
 class App extends Component {
@@ -74,15 +77,18 @@ class App extends Component {
 		return (
 			<div className="App">
                 <Header msg={this.props.welcomeMsg}/>
-                <div className="App-clicks">
-                    <button className="App-button" onClick={this.onClickHandler}>Click</button>
-                    <span>{clicks}</span>
-                    <input className="App-input" onChange={this.onChangeHandler} />
-                    <span>{inputMsg}</span>
-                </div>
-				<p className="App-intro">
-					To get started, edit <code>src/App.js</code> and save to reload.
-				</p>
+                <Clock/>
+                <HighOrderComponent>
+                    <div className="App-clicks">
+                        <button className="App-button" onClick={this.onClickHandler}>Click</button>
+                        <span>{clicks}</span>
+                        <input className="App-input" onChange={this.onChangeHandler} />
+                        <span>{inputMsg}</span>
+                    </div>
+                    <p className="App-intro">
+                        To get started, edit <code>src/App.js</code> and save to reload.
+                    </p>
+                </HighOrderComponent>
 			</div>
 		);
 	}
