@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.2",
+    "axios": "^0.16.2",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
@@ -34,10 +35,14 @@
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
     "promise": "8.0.1",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
     "react-dev-utils": "^4.0.1",
-    "react-dom": "^15.6.1",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.5.9",
@@ -98,6 +103,10 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "moment": "^2.18.1"
+    "history": "^4.7.2",
+    "moment": "^2.18.1",
+    "redux-devtools": "^3.4.0",
+    "redux-immutable-state-invariant": "^2.0.0",
+    "redux-logger": "^3.0.6"
   }
 }

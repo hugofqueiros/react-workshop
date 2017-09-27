@@ -1,8 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { render } from 'react-dom';
+
+import { Provider } from 'react-redux';
+import configureStore, { history } from './redux/store/configStore';
+
 import App from './containers/app/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App welcomeMsg={'Welcome modafuckers'} />, document.getElementById('root'));
+import './index.css';
+
+render(<App welcomeMsg={'Welcome modafuckers'} />, document.getElementById('root'));
 registerServiceWorker();
