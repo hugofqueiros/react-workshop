@@ -4,7 +4,7 @@ import { ConnectedRouter } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import App from './app/App';
 
-export default class Root extends Component {
+class Root extends Component {
     static propTypes = {
         store: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
@@ -15,9 +15,11 @@ export default class Root extends Component {
         return (
             <Provider store={store}>
                 <ConnectedRouter history={history}>
-                    <App />
+                    <App welcomeMsg={'Welcome modafuckers'} />
                 </ConnectedRouter>
             </Provider>
         );
     }
 }
+
+export default Root;

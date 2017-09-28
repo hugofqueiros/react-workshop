@@ -105,6 +105,7 @@
   "devDependencies": {
     "history": "^4.7.2",
     "moment": "^2.18.1",
+    "react-router-redux": "^4.0.8",
     "redux-devtools": "^3.4.0",
     "redux-immutable-state-invariant": "^2.0.0",
     "redux-logger": "^3.0.6"
