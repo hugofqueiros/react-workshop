@@ -1,3 +1,10 @@
+# redux-workshop
+- create a component called Count that will have 2 buttons one to increase the number and one to decrease
+create the actionTypes, action and reducer (action and reducer have their own files separate from the ones we have)
+    - See what I did in the App container with the click and the updateApp state prop
+- from that component fetch data from '' add it on state (create actions and reducers), show output on the component however you want
+    - use axios for the fetches
+
 # react-workshop
 
 - Create a Higher Order Component (pass children) with the whole lifecycle (write then all out, also )

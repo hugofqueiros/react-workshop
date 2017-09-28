@@ -15,10 +15,6 @@ export default class HighOrderComponent extends Component {
         title: 'WOWOWOWOWOW'
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         console.log('COMPONENT DID MOUNT');
         this.setState({

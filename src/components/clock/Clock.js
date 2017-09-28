@@ -4,10 +4,6 @@ import moment from 'moment';
 import './Clock.css';
 
 export default class Clock extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentWillMount() {
         this.setState({
             time: moment()

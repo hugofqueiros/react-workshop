@@ -14,12 +14,18 @@ class Root extends Component {
         const { store, history } = this.props;
         return (
             <Provider store={store}>
-                <ConnectedRouter history={history}>
-                    <App welcomeMsg={'Welcome modafuckers'} />
-                </ConnectedRouter>
+                <App welcomeMsg={'Welcome modafuckers'} />
             </Provider>
         );
     }
 }
 
 export default Root;
+
+/*return (
+    <Provider store={store}>
+        <ConnectedRouter history={history}>
+            <App welcomeMsg={'Welcome modafuckers'} />
+        </ConnectedRouter>
+    </Provider>
+);*/

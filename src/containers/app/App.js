@@ -3,8 +3,24 @@ import PropTypes from 'prop-types';
 import Header from '../../components/header/Header';
 import HighOrderComponent from '../highOrderComponent/HighOrderComponent';
 import Clock from '../../components/clock/Clock';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as AppActions from '../../redux/actions/app';
 
 import './App.css';
+
+function mapStateToProps(state) {
+    return {
+        app: state.app.appLoaded,
+        clicks: state.app.updateApp
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        AppActions: bindActionCreators(AppActions, dispatch)
+    };
+}
 
 class App extends Component {
     static propTypes = {
@@ -16,9 +32,12 @@ class App extends Component {
 
     constructor(props) {
         super(props);
+
+        console.log('props', props);
+
         this.state = {
             isMounted: false,
-            clicks: 0,
+            //clicks: 0,
             inputMsg: 'will update when you type something!'
         }
     }
@@ -58,9 +77,11 @@ class App extends Component {
 
     onClickHandler = (e) => {
         e.preventDefault();
-        this.setState({
-            clicks: this.state.clicks + 1
-        })
+        // this.setState({
+        //     clicks: this.state.clicks + 1
+        // })
+
+        this.props.AppActions.updateApp(1);
     };
 
     onChangeHandler = (e) => {
@@ -72,7 +93,8 @@ class App extends Component {
     };
 
 	render() {
-	    const {clicks, inputMsg} = this.state;
+	    const {inputMsg} = this.state;
+	    const {clicks} = this.props;
 
 		return (
 			<div className="App">
@@ -94,4 +116,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);

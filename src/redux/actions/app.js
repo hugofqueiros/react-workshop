@@ -6,4 +6,11 @@ function appLoaded() {
     };
 }
 
-export {appLoaded};
+function updateApp(data) {
+    return {
+        type: actionType.UPDATE_APP,
+        payload: data
+    }
+}
+
+export {appLoaded, updateApp};
