@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../../components/header/Header';
 import HighOrderComponent from '../highOrderComponent/HighOrderComponent';
 import Clock from '../../components/clock/Clock';
+import Count from '../../components/Count/Count';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as AppActions from '../../redux/actions/app';
@@ -12,7 +13,7 @@ import './App.css';
 function mapStateToProps(state) {
     return {
         app: state.app.appLoaded,
-        clicks: state.app.updateApp
+        //clicks: state.app.updateApp
     };
 }
 
@@ -94,7 +95,9 @@ class App extends Component {
 
 	render() {
 	    const {inputMsg} = this.state;
-	    const {clicks} = this.props;
+        //const {clicks} = this.props;
+
+        console.log('RENDER BITCH');
 
 		return (
 			<div className="App">
@@ -102,8 +105,9 @@ class App extends Component {
                 <Clock/>
                 <HighOrderComponent>
                     <div className="App-clicks">
+                        <Count />
                         <button className="App-button" onClick={this.onClickHandler}>Click</button>
-                        <span>{clicks}</span>
+
                         <input className="App-input" onChange={this.onChangeHandler} />
                         <span>{inputMsg}</span>
                     </div>
